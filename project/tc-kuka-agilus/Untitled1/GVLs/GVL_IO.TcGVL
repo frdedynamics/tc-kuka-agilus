@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <GVL Name="GVL_IO" Id="{25e33bf4-480f-4ea0-8982-bf57b482dc3c}">
-    <Declaration><![CDATA[VAR_GLOBAL
-	Estop1_A AT %I* : BOOL ; (* Emergency stop 1 A-circuit NC *)
-	Estop1_B AT %I* : BOOL ; (* Emergency stop 1 B-circuit NC *)
-END_VAR]]></Declaration>
-  </GVL>
-</TcPlcObject>
