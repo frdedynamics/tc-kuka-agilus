@@ -2,7 +2,7 @@
 
 TwinCAT code for the KUKA Agilus R700-2 Robot at Campus Verftet. Mainly safety config using FSoE (Fail Safe over EtherCAT).
 
-There is a known issue where links between aut and safety get dropped. Basically the HMI don't work. One solution is to recreate the safety project, should be improved. See #1
+There is a known issue where links between aut and safety get dropped. Basically the HMI don't work. One solution is to recreate the safety project, should be improved. See https://github.com/frdedynamics/tc-kuka-agilus/issues/1
 
 ## Getting Started
 
