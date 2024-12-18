@@ -1,0 +1,539 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.55" ClassName="CFlbTermDef" SubType="9099">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-00200000000C}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..11] OF BIT</Name>
+			<BitSize>12</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>12</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<BitSize>1</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>1</Elements>
+			</ArrayInfo>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424de6000000000000007600000028000000100000000e000000010004000000000070000000000000000000000010000000000000001c120800244aa500203262002462ee001c273f00245ad500243a7c001c222b001c1a1e002472fc00244fb7001c2a4d00243a7100246afc0024428d001c1a1300d5bbbbbbedddddddddb8777fcdd9dd9dd580ffffcddddddd9e7780f47b5dd9ddd3d35cb700e9ddd9ddd9d9de88a9ddddd9dddd9abb3dddddddddd99e04d9dd9dddddddd20adddddd9dd9d958b9ddd9ddddddd18cddddddd9dd5554e99d999d1dd9b07b2ee111e1add5bb777774bb6add</ImageData>
+		<ImageData Id="1001">424de6000000000000007600000028000000100000000e000000010004000000000070000000000000000000000000000000000000000000000000008000008000000080800080000000800080008080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00ffff0000ffffff00bb1111113bbbbbbbbb1000001bbbbbbbbb0000001bbbbbbbb300000001bbbbbbbbbbb110003bbbbbbbbbbbb3003bbbbbbbbbbbb311bbbbbbbbbbbbb300bbbbbbbbbbbbb103bbbbbbbbbbbbb01bbbbbbbbbbbb301bbbbbbbbbbbbb03bbbbbbb3bbb1001133333333bb3110000001113bb</ImageData>
+	</ImageDatas>
+	<Box Id="5" BoxType="9099" BoxFlags="#x00000020">
+		<Name>__FILENAME__</Name>
+		<ImageId>1000</ImageId>
+		<EtherCAT SlaveType="3" PdiType="#x0008" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" FoeType="1" VendorId="#x000060c8" ProductCode="#x00000071" RevisionNo="#x00040000" InfoDataAddr="true" InfoDataNetId="true" TimeoutMailbox2="2000" PortPhys="17" MaxSlotCount="3" Type="KRC4 secondary EL6695-1001" Desc="KRC4 secondary EL6695-1001">
+			<SyncMan>0010000426000100010000008000da050004001026010000</SyncMan>
+			<SyncMan>0014000422000100020000008000da050004001422010000</SyncMan>
+			<SyncMan>001817006400010003000000000000001700001864010000</SyncMan>
+			<SyncMan>002919002000010004000000000000001900002920010000</SyncMan>
+			<Fmmu>0000000000000000001800020100000001000000000000000000000000000000</Fmmu>
+			<Fmmu>0000000000000000002900010100000002000000000000000000000000000000</Fmmu>
+			<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+			<BootStrapData>0010140200141402</BootStrapData>
+			<MBoxUserCmdData>020003000c0000000000000000000000000000000000000000000000000000002008f000040000009566341200</MBoxUserCmdData>
+			<Pdo Name="Compact" Index="#x1a01" Flags="#x0090" SyncMan="3">
+				<Entry BitLen="12">
+					<Type GUID="{18071995-0000-0000-0000-00200000000C}">ARRAY [0..11] OF BIT</Type>
+				</Entry>
+				<Entry Name="TxPDO toggle" BitLen="1" Index="#x1801" Sub="#x09">
+					<Type>BIT</Type>
+					<Comment><![CDATA[Bit toggles when new data from other side received]]></Comment>
+				</Entry>
+				<Entry Name="TxPDO state" BitLen="1" Index="#x1801" Sub="#x07">
+					<Type>BIT</Type>
+					<Comment><![CDATA[0: Other side is in OP state
+>0: Error]]></Comment>
+				</Entry>
+				<Entry BitLen="1">
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="External device not connected" BitLen="1" Index="#x10f4" Sub="#x10">
+					<Type>BIT</Type>
+					<Comment><![CDATA[0: External device connected
+1: External device not connected]]></Comment>
+				</Entry>
+			</Pdo>
+			<Pdo Name="Inputs Bitf" Index="#x1a0a" Flags="#x0080" SyncMan="3">
+				<Entry Name="FSOE__FSOE Command" BitLen="8" Index="#x6000" Sub="#x01">
+					<Type>USINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_NHL" BitLen="1" Index="#x6002" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_AF" BitLen="1" Index="#x6002" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_FF" BitLen="1" Index="#x6002" Sub="#x03">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_ZS" BitLen="1" Index="#x6002" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_PE" BitLen="1" Index="#x6002" Sub="#x05">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_EXT" BitLen="1" Index="#x6002" Sub="#x06">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_T1" BitLen="1" Index="#x6002" Sub="#x07">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_T2" BitLen="1" Index="#x6002" Sub="#x08">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_NHE" BitLen="1" Index="#x6002" Sub="#x09">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_BSQ" BitLen="1" Index="#x6002" Sub="#x0a">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_SHS1" BitLen="1" Index="#x6002" Sub="#x0b">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_SHS2" BitLen="1" Index="#x6002" Sub="#x0c">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_RES_13" BitLen="1" Index="#x6002" Sub="#x0d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_RES_14" BitLen="1" Index="#x6002" Sub="#x0e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_PSA" BitLen="1" Index="#x6002" Sub="#x0f">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_0_SP" BitLen="1" Index="#x6002" Sub="#x10">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Slave CRC_0" BitLen="16" Index="#x6000" Sub="#x03">
+					<Type>UINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_SO" BitLen="1" Index="#x6002" Sub="#x11">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_RR" BitLen="1" Index="#x6002" Sub="#x12">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_JF" BitLen="1" Index="#x6002" Sub="#x13">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_VRED" BitLen="1" Index="#x6002" Sub="#x14">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_SBH_1" BitLen="1" Index="#x6002" Sub="#x15">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_SBH_2" BitLen="1" Index="#x6002" Sub="#x16">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_SBH_3" BitLen="1" Index="#x6002" Sub="#x17">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_SBH_4" BitLen="1" Index="#x6002" Sub="#x18">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_SBH_5" BitLen="1" Index="#x6002" Sub="#x19">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_SBH_6" BitLen="1" Index="#x6002" Sub="#x1a">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_SOS" BitLen="1" Index="#x6002" Sub="#x1b">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_RES_28" BitLen="1" Index="#x6002" Sub="#x1c">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_RES_29" BitLen="1" Index="#x6002" Sub="#x1d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_RES_30" BitLen="1" Index="#x6002" Sub="#x1e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_RES_31" BitLen="1" Index="#x6002" Sub="#x1f">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_1_RES_32" BitLen="1" Index="#x6002" Sub="#x20">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Slave CRC_1" BitLen="16" Index="#x6000" Sub="#x04">
+					<Type>UINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR1" BitLen="1" Index="#x6002" Sub="#x21">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR2" BitLen="1" Index="#x6002" Sub="#x22">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR3" BitLen="1" Index="#x6002" Sub="#x23">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR4" BitLen="1" Index="#x6002" Sub="#x24">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR5" BitLen="1" Index="#x6002" Sub="#x25">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR6" BitLen="1" Index="#x6002" Sub="#x26">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR7" BitLen="1" Index="#x6002" Sub="#x27">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR8" BitLen="1" Index="#x6002" Sub="#x28">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR9" BitLen="1" Index="#x6002" Sub="#x29">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR10" BitLen="1" Index="#x6002" Sub="#x2a">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR11" BitLen="1" Index="#x6002" Sub="#x2b">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR12" BitLen="1" Index="#x6002" Sub="#x2c">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR13" BitLen="1" Index="#x6002" Sub="#x2d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR14" BitLen="1" Index="#x6002" Sub="#x2e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR15" BitLen="1" Index="#x6002" Sub="#x2f">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_2_MR16" BitLen="1" Index="#x6002" Sub="#x30">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Slave CRC_2" BitLen="16" Index="#x6000" Sub="#x05">
+					<Type>UINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_49" BitLen="1" Index="#x6002" Sub="#x31">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_50" BitLen="1" Index="#x6002" Sub="#x32">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_51" BitLen="1" Index="#x6002" Sub="#x33">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_52" BitLen="1" Index="#x6002" Sub="#x34">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_53" BitLen="1" Index="#x6002" Sub="#x35">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_54" BitLen="1" Index="#x6002" Sub="#x36">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_55" BitLen="1" Index="#x6002" Sub="#x37">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_56" BitLen="1" Index="#x6002" Sub="#x38">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_57" BitLen="1" Index="#x6002" Sub="#x39">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_58" BitLen="1" Index="#x6002" Sub="#x3a">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_59" BitLen="1" Index="#x6002" Sub="#x3b">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_60" BitLen="1" Index="#x6002" Sub="#x3c">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_61" BitLen="1" Index="#x6002" Sub="#x3d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_62" BitLen="1" Index="#x6002" Sub="#x3e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_63" BitLen="1" Index="#x6002" Sub="#x3f">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Inp D_3_RES_64" BitLen="1" Index="#x6002" Sub="#x40">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Slave CRC_3" BitLen="16" Index="#x6000" Sub="#x06">
+					<Type>UINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE ConnID" BitLen="16" Index="#x6000" Sub="#x02">
+					<Type>UINT</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="Outputs Bitf" Index="#x160a" InOut="1" Flags="#x0080" SyncMan="2">
+				<Entry Name="FSOE__FSOE Command" BitLen="8" Index="#x7000" Sub="#x01">
+					<Type>USINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_RES_1" BitLen="1" Index="#x7002" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_NHE" BitLen="1" Index="#x7002" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_BS" BitLen="1" Index="#x7002" Sub="#x03">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_QBS" BitLen="1" Index="#x7002" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_SHS1" BitLen="1" Index="#x7002" Sub="#x05">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_SHS2" BitLen="1" Index="#x7002" Sub="#x06">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_E2" BitLen="1" Index="#x7002" Sub="#x07">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_E7" BitLen="1" Index="#x7002" Sub="#x08">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_US2" BitLen="1" Index="#x7002" Sub="#x09">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_SBH" BitLen="1" Index="#x7002" Sub="#x0a">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_RES_4" BitLen="1" Index="#x7002" Sub="#x0b">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_RES_5" BitLen="1" Index="#x7002" Sub="#x0c">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_RES_6" BitLen="1" Index="#x7002" Sub="#x0d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_RES_7" BitLen="1" Index="#x7002" Sub="#x0e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_RES_8" BitLen="1" Index="#x7002" Sub="#x0f">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_0_SPA" BitLen="1" Index="#x7002" Sub="#x10">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Master CRC_0" BitLen="16" Index="#x7000" Sub="#x03">
+					<Type>UINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_JR" BitLen="1" Index="#x7002" Sub="#x11">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_VRED" BitLen="1" Index="#x7002" Sub="#x12">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_SBH_1" BitLen="1" Index="#x7002" Sub="#x13">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_SBH_2" BitLen="1" Index="#x7002" Sub="#x14">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_SBH_3" BitLen="1" Index="#x7002" Sub="#x15">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_SBH_4" BitLen="1" Index="#x7002" Sub="#x16">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_SBH_5" BitLen="1" Index="#x7002" Sub="#x17">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_SBH_6" BitLen="1" Index="#x7002" Sub="#x18">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_RES_1" BitLen="1" Index="#x7002" Sub="#x19">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_RES_2" BitLen="1" Index="#x7002" Sub="#x1a">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_RES_3" BitLen="1" Index="#x7002" Sub="#x1b">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_RES_4" BitLen="1" Index="#x7002" Sub="#x1c">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_RES_5" BitLen="1" Index="#x7002" Sub="#x1d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_RES_6" BitLen="1" Index="#x7002" Sub="#x1e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_RES_7" BitLen="1" Index="#x7002" Sub="#x1f">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_1_RES_8" BitLen="1" Index="#x7002" Sub="#x20">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Master CRC_1" BitLen="16" Index="#x7000" Sub="#x04">
+					<Type>UINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER1" BitLen="1" Index="#x7002" Sub="#x21">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER2" BitLen="1" Index="#x7002" Sub="#x22">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER3" BitLen="1" Index="#x7002" Sub="#x23">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER4" BitLen="1" Index="#x7002" Sub="#x24">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER5" BitLen="1" Index="#x7002" Sub="#x25">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER6" BitLen="1" Index="#x7002" Sub="#x26">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER7" BitLen="1" Index="#x7002" Sub="#x27">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER8" BitLen="1" Index="#x7002" Sub="#x28">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER9" BitLen="1" Index="#x7002" Sub="#x29">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER10" BitLen="1" Index="#x7002" Sub="#x2a">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER11" BitLen="1" Index="#x7002" Sub="#x2b">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER12" BitLen="1" Index="#x7002" Sub="#x2c">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER13" BitLen="1" Index="#x7002" Sub="#x2d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER14" BitLen="1" Index="#x7002" Sub="#x2e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER15" BitLen="1" Index="#x7002" Sub="#x2f">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_2_UER16" BitLen="1" Index="#x7002" Sub="#x30">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Master CRC_2" BitLen="16" Index="#x7000" Sub="#x05">
+					<Type>UINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ1" BitLen="1" Index="#x7002" Sub="#x31">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ2" BitLen="1" Index="#x7002" Sub="#x32">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ3" BitLen="1" Index="#x7002" Sub="#x33">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ4" BitLen="1" Index="#x7002" Sub="#x34">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ5" BitLen="1" Index="#x7002" Sub="#x35">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ6" BitLen="1" Index="#x7002" Sub="#x36">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ7" BitLen="1" Index="#x7002" Sub="#x37">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ8" BitLen="1" Index="#x7002" Sub="#x38">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ9" BitLen="1" Index="#x7002" Sub="#x39">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ10" BitLen="1" Index="#x7002" Sub="#x3a">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ11" BitLen="1" Index="#x7002" Sub="#x3b">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ12" BitLen="1" Index="#x7002" Sub="#x3c">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ13" BitLen="1" Index="#x7002" Sub="#x3d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ14" BitLen="1" Index="#x7002" Sub="#x3e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ15" BitLen="1" Index="#x7002" Sub="#x3f">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Out D_3_WZ16" BitLen="1" Index="#x7002" Sub="#x40">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE Master CRC_3" BitLen="16" Index="#x7000" Sub="#x06">
+					<Type>UINT</Type>
+				</Entry>
+				<Entry Name="FSOE__FSOE ConnID" BitLen="16" Index="#x7000" Sub="#x02">
+					<Type>UINT</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="Std. In (4 Bytes)" Index="#x1a10" Flags="#x0090" SyncMan="3">
+				<Entry Name="Input DWORD 0" BitLen="32" Index="#x6010" Sub="#x01">
+					<Type>UDINT</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="Std. Out (4 Bytes)" Index="#x1610" InOut="1" Flags="#x0090" SyncMan="2">
+				<Entry Name="Output DWORD 0" BitLen="32" Index="#x7010" Sub="#x01">
+					<Type>UDINT</Type>
+				</Entry>
+			</Pdo>
+			<CoeProfile ProfileNo="5001"/>
+			<Slot Name="Standard Sync Inputs">
+				<SlotData>0000000001000400000000000000000000000000000000000000000000000000</SlotData>
+				<ModuleIdent>640</ModuleIdent>
+				<Module Id="#x03090002" Type="Sync Inputs" Class="">
+					<Name>Module 1 (Sync Inputs)</Name>
+					<ImageId>413</ImageId>
+					<ModuleData>c860000080020000000004000000000000000000000000000000000000000000</ModuleData>
+					<PdoIndex>6657</PdoIndex>
+				</Module>
+			</Slot>
+			<Slot Name="Safety Process Data">
+				<SlotData>0000000001000400000000000000000000000000000000000000000000000000</SlotData>
+				<ModuleIdent>260</ModuleIdent>
+				<ModuleIdent>258</ModuleIdent>
+				<Module Id="#x03090003" Type="Safety Data Bitf  (8 Byte)" Class="">
+					<Name>Module 2 (Safety Data Bitf  (8 Byte))</Name>
+					<ImageId>1001</ImageId>
+					<ModuleData>c860000004010000000008000000000000000000000000000000000000000000</ModuleData>
+					<PdoIndex>6666</PdoIndex>
+					<PdoIndex>5642</PdoIndex>
+				</Module>
+			</Slot>
+			<Slot Name="Standard Process Data">
+				<SlotData>0000000001000400000000000000000000000000000000000000000000000000</SlotData>
+				<ModuleIdent>512</ModuleIdent>
+				<ModuleIdent>513</ModuleIdent>
+				<ModuleIdent>514</ModuleIdent>
+				<ModuleIdent>515</ModuleIdent>
+				<ModuleIdent>516</ModuleIdent>
+				<ModuleIdent>517</ModuleIdent>
+				<ModuleIdent>518</ModuleIdent>
+				<ModuleIdent>519</ModuleIdent>
+				<Module Id="#x03090004" Type="Default IO" Class="">
+					<Name>Module 3 (Default IO)</Name>
+					<ImageId>413</ImageId>
+					<ModuleData>c860000000020000000004000000000000000000000000000000000000000000</ModuleData>
+					<PdoIndex>6672</PdoIndex>
+					<PdoIndex>5648</PdoIndex>
+				</Module>
+			</Slot>
+		</EtherCAT>
+	</Box>
+</TcSmItem>
